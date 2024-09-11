@@ -20,17 +20,17 @@ jobs:
       - name: Sign in to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker Image
-        run: docker build -t sonjuhyeon/task-app-front .
+        run: docker build -t sonjuhyeon00/task-app-front .
       - name: Push Docker Image
-        run: docker push sonjuhyeon/task-app-front:latest
+        run: docker push sonjuhyeon00/task-app-front:latest
 
   deploy:
     needs: build
     runs-on: aws-ec2
     steps:
       - name: Pull image from docker hub
-        run: docker pull sonjuhyeon/task-app-front:latest
+        run: docker pull sonjuhyeon00/task-app-front:latest
       - name: Delete existing container
         run: docker rm -f reactContainer
       - name: Run container
-        run: docker run -d -p 80:80 --name reactContainer sonjuhyeon/task-app-front
+        run: docker run -d -p 80:80 --name reactContainer sonjuhyeon00/task-app-front
