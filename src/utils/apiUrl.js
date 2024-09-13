@@ -1,12 +1,11 @@
-const GET_TASKS_API_URL = "https://taskback.microdeveloper.co.kr/get_tasks";
-const POST_TASKS_API_URL = "https://taskback.microdeveloper.co.kr/post_task";
-const DELETE_TASKS_API_URL =
-  "https://taskback.microdeveloper.co.kr/delete_task";
+const GET_TASKS_API_URL = "http://localhost:8080/get_tasks";
+const POST_TASKS_API_URL = "http://localhost:8080/post_task";
+const DELETE_TASKS_API_URL = "http://localhost:8080/delete_task";
 const UPDATE_COMPLETED_TASKS_API_URL =
-  "https://taskback.microdeveloper.co.kr/update_completed_task";
+  "http://localhost:8080/update_completed_task";
 const UPDATE_IMPORTANT_TASKS_API_URL =
-  "https://taskback.microdeveloper.co.kr/update_important_task";
-const UPDATE_TASK_API_URL = "https://taskback.microdeveloper.co.kr/update_task";
+  "http://localhost:8080/update_important_task";
+const UPDATE_TASK_API_URL = "http://localhost:8080/update_task";
 
 export {
   GET_TASKS_API_URL,
